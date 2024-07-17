@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: right;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: right;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>قائمة التسوق</h2>
+    <h2>   بلزعتل يتز بتينكز  ببمصبذ كصازفح</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>رقم</th>
+                <th>العنصر</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>بيبسي</td></tr>
+            <tr><td>2</td><td>لبن</td></tr>
+            <tr><td>3</td><td>زبدة فول</td></tr>
+            <tr><td>4</td><td>عسل</td></tr>
+            <tr><td>5</td><td>تونة</td></tr>
+            <tr><td>6</td><td>لوز</td></tr>
+            <tr><td>7</td><td>يوناني</td></tr>
+            <tr><td>8</td><td>تمر</td></tr>
+            <tr><td>9</td><td>زبادي</td></tr>
+            <tr><td>10</td><td>برتقال</td></tr>
+            <tr><td>11</td><td>تفاح</td></tr>
+            <tr><td>12</td><td>يوسفي</td></tr>
+            <tr><td>13</td><td>ناجتس</td></tr>
+            <tr><td>14</td><td>كفته</td></tr>
+            <tr><td>15</td><td>زبدة</td></tr>
+            <tr><td>16</td><td>ببريكا</td></tr>
+            <tr><td>17</td><td>بسمتي</td></tr>
+            <tr><td>18</td><td>مية</td></tr>
+            <tr><td>19</td><td>صن</td></tr>
+            <tr><td>20</td><td>بانيه</td></tr>
+            <tr><td>21</td><td>ذرة</td></tr>
+            <tr><td>22</td><td>كورن فليكس</td></tr>
+            <tr><td>23</td><td>صوص</td></tr>
+            <tr><td>24</td><td>اندومي</td></tr>
+            <tr><td>25</td><td>زيتون</td></tr>
+            <tr><td>26</td><td>فول</td></tr>
+            <tr><td>27</td><td>حمص</td></tr>
+        </tbody>
+    </table>
+
+    <button onclick="copyToWhatsApp()">نسخ إلى واتساب</button>
+
+    <script>
+        function copyToWhatsApp() {
+            var items = [
+                "بيبسي", "لبن", "زبدة فول", "عسل", "تونة", "لوز", "يوناني", "تمر",
+                "زبادي", "برتقال", "تفاح", "يوسفي", "ناجتس", "كفته", "زبدة", "ببريكا",
+                "بسمتي", "مية", "صن", "بانيه", "ذرة", "كورن فليكس", "صوص", "اندومي",
+                "زيتون", "فول", "حمص"
+            ];
+            var message = items.join(" - ");
+            var url = "https://wa.me/?text=" + encodeURIComponent(message);
+            window.open(url, "_blank");
+        }
+    </script>
+
+</body>
+</html>
